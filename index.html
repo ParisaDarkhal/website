@@ -1,888 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oncilla AI - Automate Your Business with AI That Works</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Helvetica', sans-serif;
-        scroll-behavior: smooth;
-      }
-      /* Additional custom styles can be added here if needed */
-      .hero-bg {
-        background-color: #f0f4f8; /* Light blue/gray for trust */
-      }
-      .cta-button {
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
-      .cta-button:hover {
-        transform: translateY(-2px);
-      }
-      .card {
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-      /* Simple icon placeholder style */
-      .icon-placeholder {
-        width: 48px;
-        height: 48px;
-        background-color: #e0e7ff; /* Light indigo */
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #4338ca; /* Indigo */
-      }
-    </style>
-  </head>
-  <body class="bg-white text-gray-800">
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-      <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center relative"
-      >
-        <div class="flex items-center space-x-2">
-          <img
-            src="logo.jpg"
-            alt="Oncilla AI Logo"
-            class="h-12 object-contain"
-          />
-          <a href="#" class="text-2xl font-bold text-indigo-700">Oncilla AI</a>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Oncilla AI - AI Solutions for Local Service Businesses</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			:root {
+				--color-accent: #f59e0b;
+				--color-accent-light: #fbbf24;
+			}
+			.bg-accent {
+				background-color: var(--color-accent);
+			}
+			.text-accent {
+				color: var(--color-accent);
+			}
+			.border-accent {
+				border-color: var(--color-accent);
+			}
+			.bg-accent-light {
+				background-color: var(--color-accent-light);
+			}
+			.hover\:bg-accent:hover {
+				background-color: var(--color-accent);
+			}
+			.hover\:bg-accent-light:hover {
+				background-color: var(--color-accent-light);
+			}
+			.hover\:border-accent:hover {
+				border-color: var(--color-accent);
+			}
+			.from-accent {
+				--tw-gradient-from: var(--color-accent);
+			}
+			.to-accent-light {
+				--tw-gradient-to: var(--color-accent-light);
+			}
+			.via-accent-light {
+				--tw-gradient-via: var(--color-accent-light);
+			}
+		</style>
+	</head>
+	<body class="bg-gray-900 text-white">
+		<!-- Sticky Navigation -->
+		<nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50">
+			<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+				<div class="flex items-center space-x-2">
+					<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+						<img src="logo.jpg">
+							<!-- Spots pattern -->
+							<circle cx="30" cy="55" r="2" fill="white" />
+							<circle cx="40" cy="58" r="1.5" fill="white" />
+							<circle cx="50" cy="55" r="2" fill="white" />
+							<circle cx="60" cy="58" r="1.5" fill="white" />
+							<circle cx="70" cy="55" r="2" fill="white" />
+							<!-- Tail -->
+							<path d="M75 55 Q85 45 90 40 Q85 35 80 45 Q75 50 75 55" fill="black" />
+						</svg>
+					</div>
+					<span class="text-xl font-bold text-white">ONCILLA AI</span>
+				</div>
+				<div class="hidden md:flex space-x-8">
+					<a href="#home" class="hover:text-accent transition-colors">Home</a>
+					<a href="#about" class="hover:text-accent transition-colors">About</a>
+					<a href="#services" class="hover:text-accent transition-colors">Services</a>
+					<a href="#industries" class="hover:text-accent transition-colors">Who We Help</a>
+					<a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+				</div>
+				<button id="mobile-menu-btn" class="md:hidden text-white">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="md:hidden hidden bg-gray-900 border-t border-gray-700">
+				<div class="px-4 py-2 space-y-2">
+					<a href="#home" class="block py-2 px-3 text-white hover:text-accent transition-colors"
+						>Home</a
+					>
+					<a href="#about" class="block py-2 px-3 text-white hover:text-accent transition-colors"
+						>About</a
+					>
+					<a href="#services" class="block py-2 px-3 text-white hover:text-accent transition-colors"
+						>Services</a
+					>
+					<a
+						href="#industries"
+						class="block py-2 px-3 text-white hover:text-accent transition-colors"
+						>Who We Help</a
+					>
+					<a href="#contact" class="block py-2 px-3 text-white hover:text-accent transition-colors"
+						>Contact</a
+					>
+				</div>
+			</div>
+		</nav>
 
-        <button
-          id="menu-toggle"
-          class="md:hidden text-indigo-700 focus:outline-none"
-        >
-          <svg
-            id="hamburger-icon"
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg
-            id="close-icon"
-            class="w-6 h-6 hidden"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+		<!-- Hero Section -->
+		<section
+			id="home"
+			class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+		>
+			<div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"></div>
+			<!-- Faded Oncilla Cat Background -->
+			<div class="absolute inset-0 opacity-10 mt-10">
+				<div
+					class="w-full h-full bg-contain bg-center bg-no-repeat"
+					style="
+						background-image: url('Oncilla-2.jpg');
+					"
+				></div>
+			</div>
 
-        <div
-          id="menu"
-          class="hidden md:flex flex-col md:flex-row items-start md:items-center md:space-x-4 mt-4 md:mt-0 w-full md:w-auto"
-        >
-          <div class="md:hidden self-end pr-4 pt-2">
-            <button
-              id="menu-close-btn"
-              class="text-gray-600 hover:text-indigo-700 text-2xl font-bold"
-            >
-              &times;
-            </button>
-          </div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<div class="max-w-5xl mx-auto">
+					<h1
+						class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-300 to-white bg-clip-text text-transparent"
+					>
+						AI That Works for Local Businesses
+					</h1>
+					<p class="text-xl md:text-2xl mb-4 text-gray-300 max-w-4xl mx-auto">
+						We help home service businesses, professional services, and local companies automate
+						operations, serve customers better, and grow faster with proven AI solutions.
+					</p>
+					<p class="text-lg mb-8 text-accent font-semibold">
+						From scheduling to customer service to lead generation—AI that pays for itself.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a
+							href="#contact"
+							class="bg-accent hover:bg-accent-light text-black px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+						>
+							Get Your Free AI Assessment
+						</a>
+						<a
+							href="#services"
+							class="border-2 border-accent text-accent hover:bg-accent hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+						>
+							See How AI Works
+						</a>
+					</div>
+					<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-center max-w-3xl mx-auto">
+						<div class="bg-gray-800/50 backdrop-blur p-4 rounded-lg">
+							<div class="text-accent font-bold text-xl">15+</div>
+							<div class="text-sm text-gray-300">Years AI expertise</div>
+						</div>
+						<div class="bg-gray-800/50 backdrop-blur p-4 rounded-lg">
+							<div class="text-accent font-bold text-xl">Small/Medium Businesses</div>
+							<div class="text-sm text-gray-300">Focused solutions</div>
+						</div>
+						<div class="bg-gray-800/50 backdrop-blur p-4 rounded-lg">
+							<div class="text-accent font-bold text-xl">Return on Investment</div>
+							<div class="text-sm text-gray-300">Proven results</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-          <a
-            href="#services"
-            class="text-gray-600 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium"
-            >Services</a
-          >
-          <a
-            href="#how-it-works"
-            class="text-gray-600 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium"
-            >How It Works</a
-          >
-          <a
-            href="#case-studies"
-            class="text-gray-600 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium"
-            >Results</a
-          >
-          <a
-            href="#contact"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg cta-button text-sm mt-2 md:mt-0"
-            >Get Free AI Audit</a
-          >
-        </div>
-      </nav>
-    </header>
-    <section id="hero" class="hero-bg py-20 md:py-32">
-      <div class="container mx-auto px-6 text-center">
-        <h1
-          class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
-        >
-          Unleash Non-Stop Growth with Expert-Driven, Custom AI Automation
-        </h1>
-        <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-          Transforming Your Business with Custom, Ever-Improving AI
-          Solutions—typically saving clients 30% in operating costs.
-        </p>
-        <a
-          href="#contact"
-          class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button shadow-lg"
-        >
-          Get a Free AI Audit
-        </a>
-        <!-- Full-width, full-height flex container -->
-        <div class="flex items-center justify-center w-full">
-          <!-- Optional: control the size of the image container -->
-          <div class="w-64 mt-4">
-            <img
-              src="AI-illustration.jpg"
-              alt="AI Automation Concept"
-              class="rounded-lg shadow-xl w-full h-auto"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Problem/Solution Section -->
+		<section class="py-20 bg-gray-800 scroll-mt-20" id="problem-solution">
+			<div class="container mx-auto px-4">
+				<div class="max-w-6xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-4xl md:text-5xl font-bold mb-6">You're Losing Money Every Day</h2>
+						<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+							While you're managing calls, scheduling, and paperwork manually, your competitors are
+							using AI to work smarter.
+						</p>
+					</div>
 
-    <section id="problem-solution" class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Stop Battling Legacy Systems. Start Leading with AI.
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Traditional businesses face mounting pressures. We provide the AI
-            expertise to turn these challenges into opportunities.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div>
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Are You Facing:
-            </h3>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Legacy Processes & Data Silos:</strong> Hindering
-                  agility and decision-making.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Rising Labor Costs & Repetitive Tasks:</strong>
-                  Draining resources and impacting morale.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Lack of In-House AI Expertise:</strong> Making it
-                  difficult to leverage powerful new technologies.</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Oncilla AI Delivers:
-            </h3>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Reduced Manual Work & Costs:</strong> Automate
-                  routine tasks and reallocate resources to high-value
-                  activities.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Improved Accuracy & Efficiency:</strong> Minimize
-                  errors and accelerate processes with intelligent
-                  automation.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span
-                  ><strong>Competitive Advantage & New Revenue Streams:</strong>
-                  Leverage data-driven insights to innovate and grow.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-12 md:mt-16 text-center">
-          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-            At Oncilla AI, we bridge the gap between your current operational
-            challenges and the transformative potential of artificial
-            intelligence. We partner with you to implement AI solutions that are
-            not just technologically advanced, but also practical, measurable,
-            and aligned with your core business objectives.
-          </p>
-        </div>
-      </div>
-    </section>
+					<div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+						<div>
+							<h3 class="text-3xl font-bold mb-6 text-red-400">Without AI, You're Stuck...</h3>
+							<ul class="space-y-4">
+								<li class="flex items-start">
+									<span class="text-red-400 mr-3 text-xl">❌</span>
+									<span class="text-gray-300"
+										>Spending hours on repetitive data entry and documentation</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-400 mr-3 text-xl">❌</span>
+									<span class="text-gray-300"
+										>Manual scheduling creates double-bookings and gaps</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-400 mr-3 text-xl">❌</span>
+									<span class="text-gray-300"
+										>Creating content and proposals from scratch every time</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-400 mr-3 text-xl">❌</span>
+									<span class="text-gray-300"
+										>Struggling to find information buried in files and emails</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-400 mr-3 text-xl">❌</span>
+									<span class="text-gray-300">Working nights and weekends just to keep up</span>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-3xl font-bold mb-6 text-accent">With Oncilla AI, You Win</h3>
+							<ul class="space-y-4">
+								<li class="flex items-start">
+									<span class="text-accent mr-3 text-xl">✅</span>
+									<span class="text-gray-300"
+										>AI automates data processing and document creation</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-accent mr-3 text-xl">✅</span>
+									<span class="text-gray-300"
+										>Smart workflows that prevent conflicts and errors</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-accent mr-3 text-xl">✅</span>
+									<span class="text-gray-300">Generate content and proposals automatically</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-accent mr-3 text-xl">✅</span>
+									<span class="text-gray-300"
+										>Instant answers from your company knowledge base</span
+									>
+								</li>
+								<li class="flex items-start">
+									<span class="text-accent mr-3 text-xl">✅</span>
+									<span class="text-gray-300"
+										>Work normal hours while AI handles routine tasks</span
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section id="how-it-works" class="py-16 md:py-24 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Your AI Transformation in 3 Simple Steps
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            We make AI adoption straightforward and results-driven.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
-          <div class="p-6 bg-white rounded-xl shadow-lg card">
-            <div
-              class="icon-placeholder mx-auto mb-6 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Step 1: Discovery & Data Assessment
-            </h3>
-            <p class="text-gray-600">
-              We dive deep into your operations, identify high-impact automation
-              opportunities, and assess your data landscape to ensure AI
-              readiness.
-            </p>
-          </div>
-          <div class="p-6 bg-white rounded-xl shadow-lg card">
-            <div
-              class="icon-placeholder mx-auto mb-6 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Step 2: Custom AI Model Development & Integration
-            </h3>
-            <p class="text-gray-600">
-              Our experts develop and train bespoke AI models tailored to your
-              specific needs, seamlessly integrating them into your existing
-              workflows.
-            </p>
-          </div>
-          <div class="p-6 bg-white rounded-xl shadow-lg card">
-            <div
-              class="icon-placeholder mx-auto mb-6 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Step 3: Deployment, Training & Ongoing Support
-            </h3>
-            <p class="text-gray-600">
-              We manage the full deployment, provide comprehensive training for
-              your team, and offer continuous support to ensure optimal
-              performance and ROI.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- About Section -->
+		<section id="about" class="py-20 bg-gray-900 scroll-mt-20">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">Why Oncilla AI Gets Results</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						Named after the oncilla cat with a high hunting success rate, <br/> 
+						we bring that same precision to your business automation.
+					</p>
+				</div>
 
-    <section id="case-studies" class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Real Results with Oncilla AI
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses like yours achieve remarkable
-            outcomes.
-          </p>
-        </div>
+				<div class="grid md:grid-cols-3 gap-8 mb-16">
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+						<div class="text-accent text-4xl mb-4">🎯</div>
+						<h3 class="text-2xl font-bold mb-4">15+ Years AI Expertise</h3>
+						<p class="text-gray-300">
+							We've been building AI solutions since before ChatGPT made it trendy. Deep experience
+							in Machine Learning, NLP, and automation.
+						</p>
+					</div>
 
-        <div
-          class="bg-indigo-50 p-8 md:p-12 rounded-xl shadow-lg mb-12 md:mb-16"
-        >
-          <div class="md:flex md:items-center">
-            <img
-              src="https://placehold.co/300x200/E0E7FF/4338CA?text=Case+Study+Visual"
-              alt="Case Study Visual"
-              class="rounded-lg shadow-md md:mr-8 mb-6 md:mb-0 w-full md:w-1/3 h-auto object-cover"
-            />
-            <div>
-              <h3 class="text-2xl font-semibold text-indigo-700 mb-3">
-                Reduced Invoice Processing Time by 70% for Global Finance Corp
-              </h3>
-              <p class="text-gray-700 mb-4">
-                Global Finance Corp, a leading financial services provider, was
-                struggling with manual invoice processing, leading to delays and
-                high operational costs. By implementing our AI-driven
-                intelligent document processing solution, they automated data
-                extraction and validation, achieving a 70% reduction in
-                processing time and a 45% decrease in related costs within six
-                months.
-              </p>
-              <p class="text-gray-600 font-medium">
-                <strong>Industry:</strong> Finance |
-                <strong>Use Case:</strong> Intelligent Document Processing
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+						<div class="text-accent text-4xl mb-4">🏠</div>
+						<h3 class="text-2xl font-bold mb-4">Local Business Focused</h3>
+						<p class="text-gray-300">
+							We understand service businesses. No tech jargon—just practical AI that fits how you
+							actually work and makes you more money.
+						</p>
+					</div>
 
-        <h3
-          class="text-2xl md:text-3xl font-semibold text-gray-900 mb-8 text-center"
-        >
-          Trusted by Industry Leaders
-        </h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md card">
-            <img
-              src="https://placehold.co/80x80/CBD5E0/4A5568?text=Photo"
-              alt="Client Photo"
-              class="w-20 h-20 rounded-full mx-auto mb-4"
-            />
-            <p class="text-gray-700 italic mb-4">
-              "Oncilla AI's predictive maintenance solution has been a
-              game-changer for our manufacturing plant. We've seen a significant
-              reduction in downtime and maintenance costs."
-            </p>
-            <p class="font-semibold text-gray-800">Sarah Chen</p>
-            <p class="text-sm text-gray-600">COO, Apex Manufacturing</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md card">
-            <img
-              src="https://placehold.co/80x80/CBD5E0/4A5568?text=Photo"
-              alt="Client Photo"
-              class="w-20 h-20 rounded-full mx-auto mb-4"
-            />
-            <p class="text-gray-700 italic mb-4">
-              "The AI-driven patient triage system developed by Oncilla AI has
-              improved our clinic's efficiency by over 40% and enhanced patient
-              satisfaction."
-            </p>
-            <p class="font-semibold text-gray-800">Dr. James Miller</p>
-            <p class="text-sm text-gray-600">
-              Chief Medical Officer, HealthFirst Clinics
-            </p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md card">
-            <img
-              src="https://placehold.co/80x80/CBD5E0/4A5568?text=Photo"
-              alt="Client Photo"
-              class="w-20 h-20 rounded-full mx-auto mb-4"
-            />
-            <p class="text-gray-700 italic mb-4">
-              "Their team truly understands the challenges of legacy systems in
-              finance. The custom AI solution for fraud detection has been
-              invaluable."
-            </p>
-            <p class="font-semibold text-gray-800">David Lee</p>
-            <p class="text-sm text-gray-600">CTO, SecureBank Holdings</p>
-          </div>
-        </div>
-      </div>
-    </section>
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+						<div class="text-accent text-4xl mb-4">📈</div>
+						<h3 class="text-2xl font-bold mb-4">Proven ROI</h3>
+						<p class="text-gray-300">
+							Our clients typically see 30-60% efficiency gains and 3-6 month payback periods. We
+							track what matters: your bottom line.
+						</p>
+					</div>
+				</div>
 
-    <section id="services" class="py-16 md:py-24 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Core AI & Automation Services
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tailored solutions to meet your unique business needs.
-          </p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow-lg card text-center">
-            <div class="icon-placeholder mx-auto mb-4">
-              <svg
-                class="w-7 h-7 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13V7m0 13a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              AI Strategy & Roadmapping
-            </h3>
-            <p class="text-gray-600 text-sm">
-              We help you define a clear AI vision and actionable roadmap
-              aligned with your business goals.
-            </p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg card text-center">
-            <div class="icon-placeholder mx-auto mb-4">
-              <svg
-                class="w-7 h-7 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19.428 15.428a4 4 0 00-5.656 0M14 10l-2 2m0 0l-2-2m2 2v2.828M12 15a4 4 0 01-5.656 0M4.572 8.572a4 4 0 005.656 0M14 10h.01M10 10h.01M12 6a4 4 0 015.656 0M6.344 4.344a4 4 0 00-5.657 0M17.656 19.656a4 4 0 005.657 0M10 14v.01M14 14v.01"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Custom Machine Learning Models
-            </h3>
-            <p class="text-gray-600 text-sm">
-              Develop bespoke ML models for predictive analytics, NLP, computer
-              vision, and more.
-            </p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg card text-center">
-            <div class="icon-placeholder mx-auto mb-4">
-              <svg
-                class="w-7 h-7 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Robotic Process Automation (RPA)
-            </h3>
-            <p class="text-gray-600 text-sm">
-              Automate repetitive, rule-based tasks across applications to free
-              up your human workforce.
-            </p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg card text-center">
-            <div class="icon-placeholder mx-auto mb-4">
-              <svg
-                class="w-7 h-7 text-indigo-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7L12 3l8 4M12 21v-8"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Data Engineering & Visualization
-            </h3>
-            <p class="text-gray-600 text-sm">
-              Build robust data pipelines and intuitive dashboards to unlock
-              actionable insights from your data.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+				<div class="text-center bg-gray-800 p-8 rounded-xl">
+					<h3 class="text-2xl font-bold mb-4 text-accent">The Oncilla Advantage</h3>
+					<p class="text-lg text-gray-300 max-w-4xl mx-auto">
+						The oncilla doesn't waste energy chasing every opportunity—it focuses on the right
+						targets and succeeds consistently. We apply the same precision to your business:
+						targeted AI solutions that work, not flashy tech that sits unused.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <section id="why-us" class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Partner with Oncilla AI?
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're more than just AI consultants; we're your dedicated partners
-            in transformation.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="flex items-start">
-            <svg
-              class="w-8 h-8 text-indigo-600 mr-4 flex-shrink-0 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-1">
-                Industry-Certified Data Scientists
-              </h3>
-              <p class="text-gray-600">
-                Our team comprises experts with proven track records in
-                delivering successful AI projects across various sectors.
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <svg
-              class="w-8 h-8 text-indigo-600 mr-4 flex-shrink-0 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-              ></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-1">
-                End-to-End Project Ownership
-              </h3>
-              <p class="text-gray-600">
-                From initial consultation to ongoing support, we manage every
-                aspect of your AI implementation.
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <svg
-              class="w-8 h-8 text-indigo-600 mr-4 flex-shrink-0 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-1">
-                Flexible Pricing & Engagement Models
-              </h3>
-              <p class="text-gray-600">
-                We offer adaptable pricing structures to suit your budget and
-                project scope, ensuring maximum value.
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <svg
-              class="w-8 h-8 text-indigo-600 mr-4 flex-shrink-0 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 3.536l3.536-3.536m0 5.656l-3.536 3.536M12 21a9 9 0 110-18 9 9 0 010 18zm0-5a4 4 0 100-8 4 4 0 000 8z"
-              ></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-1">
-                Dedicated 24/7 Support
-              </h3>
-              <p class="text-gray-600">
-                Our commitment doesn't end at deployment; we provide ongoing
-                support to ensure your AI solutions thrive.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Services Section -->
+		<section id="services" class="py-20 bg-gray-800 scroll-mt-20">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">AI Solutions That Actually Work</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						Stop dreaming about AI—start using it. Here's how we help local businesses win with
+						automation.
+					</p>
+				</div>
 
-    <section id="contact" class="py-16 md:py-24 bg-indigo-700 text-white">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Transform Your Business with AI?
-        </h2>
-        <p class="text-lg md:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto">
-          Let's discuss how Oncilla AI can help you cut costs, boost efficiency,
-          and unlock new growth opportunities.
-        </p>
-        <a
-          href="mailto:hello@oncilla.ai?subject=AI Project Inquiry"
-          class="bg-white hover:bg-gray-100 text-indigo-700 font-bold py-4 px-10 rounded-lg text-lg cta-button shadow-lg mr-0 md:mr-4 mb-4 md:mb-0"
-        >
-          Let's Talk AI
-        </a>
-        <a
-          href="#hero"
-          class="border-2 border-indigo-300 hover:bg-indigo-600 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button"
-        >
-          Request a Proposal
-        </a>
-        <p class="mt-8 text-indigo-300 text-sm">
-          No commitment, just a 30-minute exploration call to discover your AI
-          potential.
-        </p>
-      </div>
-    </section>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">🤖</div>
+						<h3 class="text-2xl font-bold mb-4">AI Agents</h3>
+						<p class="text-gray-300">
+							Smart AI agents that handle customer interactions, answer questions, and perform tasks
+							automatically. Available 24/7 to serve your customers.
+						</p>
+					</div>
 
-    <footer class="py-12 bg-gray-800 text-gray-400">
-      <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-4">Oncilla AI</h3>
-            <p class="text-sm">
-              Empowering businesses with intelligent automation and
-              transformative AI solutions.
-            </p>
-            <div class="mt-4 flex space-x-4">
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><svg
-                  class="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                    clip-rule="evenodd"
-                  /></svg
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><svg
-                  class="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                  /></svg
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                  ></path></svg
-              ></a>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#services" class="hover:text-white">Services</a></li>
-              <li>
-                <a href="#how-it-works" class="hover:text-white"
-                  >How It Works</a
-                >
-              </li>
-              <li>
-                <a href="#case-studies" class="hover:text-white"
-                  >Case Studies</a
-                >
-              </li>
-              <li>
-                <a href="#contact" class="hover:text-white">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <p>
-                  Email:
-                  <a href="mailto:hello@oncilla.ai" class="hover:text-white"
-                    >hello@oncilla.ai</a
-                  >
-                </p>
-              </li>
-              <li>
-                <p>
-                  Phone:
-                  <a href="tel:+15551234567" class="hover:text-white"
-                    >(555) 123-4567</a
-                  >
-                  (Placeholder)
-                </p>
-              </li>
-              <li><p>123 Tech Avenue, Innovation City, ST 98765</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
-          <p>
-            &copy; <span id="currentYear"></span> Oncilla AI. All Rights
-            Reserved.
-          </p>
-          <p>
-            <a href="/privacy-policy" class="hover:text-white"
-              >Privacy Policy</a
-            >
-            |
-            <a href="/terms-of-service" class="hover:text-white"
-              >Terms of Service</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
-  <script src="script.js"></script>
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">🔄</div>
+						<h3 class="text-2xl font-bold mb-4">AI Automations</h3>
+						<p class="text-gray-300">
+							Automate repetitive tasks and workflows. From data processing to customer
+							communications—let AI handle the routine work.
+						</p>
+					</div>
+
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">🧠</div>
+						<h3 class="text-2xl font-bold mb-4">RAG Solutions</h3>
+						<p class="text-gray-300">
+							Turn your company knowledge into instant AI responses. Upload your documents and let
+							AI provide accurate answers to customers and staff.
+						</p>
+					</div>
+
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">⚙️</div>
+						<h3 class="text-2xl font-bold mb-4">Custom AI Implementation</h3>
+						<p class="text-gray-300">
+							Tailored AI solutions built specifically for your business needs. We develop custom AI
+							applications that fit your unique workflows.
+						</p>
+					</div>
+
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">✨</div>
+						<h3 class="text-2xl font-bold mb-4">AI Content Generation</h3>
+						<p class="text-gray-300">
+							Automated content creation for marketing, documentation, and customer communications.
+							Consistent, high-quality content at scale.
+						</p>
+					</div>
+
+					<div
+						class="bg-gray-900 p-8 rounded-xl border border-gray-600 hover:border-accent transition-colors"
+					>
+						<div class="text-accent text-3xl mb-4">🌐</div>
+						<h3 class="text-2xl font-bold mb-4">Website Development</h3>
+						<p class="text-gray-300">
+							Modern, responsive websites built for your business. Clean, professional sites that
+							convert visitors into customers.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Industries Section -->
+		<section id="industries" class="py-20 bg-gray-900 scroll-mt-20">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">Built for Your Business</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						We specialize in businesses that serve local customers. If you book appointments,
+						provide quotes, or manage customer relationships, we can help.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8 mb-12">
+					<div class="bg-gray-800 p-8 rounded-xl text-center border border-gray-700">
+						<div class="text-accent text-4xl mb-4">🔧</div>
+						<h3 class="text-2xl font-bold mb-4">Home Services</h3>
+						<p class="text-gray-300 mb-4">
+							HVAC, plumbing, electrical, appliance repair, landscaping, cleaning services
+						</p>
+						<div class="text-sm text-gray-400">
+							<div class="mb-2 font-semibold text-accent">How We Help:</div>
+							<div>
+								AI agents • Workflow automation • Knowledge management • Content generation •
+								Professional websites
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gray-800 p-8 rounded-xl text-center border border-gray-700">
+						<div class="text-accent text-4xl mb-4">🏢</div>
+						<h3 class="text-2xl font-bold mb-4">Professional Services</h3>
+						<p class="text-gray-300 mb-4">
+							Legal, accounting, consulting, real estate, insurance, financial planning
+						</p>
+						<div class="text-sm text-gray-400">
+							<div class="mb-2 font-semibold text-accent">How We Help:</div>
+							<div>
+								Custom AI solutions • Document processing • RAG systems • Automated content • Modern
+								websites
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gray-800 p-8 rounded-xl text-center border border-gray-700">
+						<div class="text-accent text-4xl mb-4">🏪</div>
+						<h3 class="text-2xl font-bold mb-4">Local Businesses</h3>
+						<p class="text-gray-300 mb-4">
+							Auto services, fitness, beauty, restaurants, retail, healthcare practices
+						</p>
+						<div class="text-sm text-gray-400">
+							<div class="mb-2 font-semibold text-accent">How We Help:</div>
+							<div>
+								Business automation • AI implementations • Smart workflows • Content creation • Web
+								development
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center bg-gray-800 p-8 rounded-xl border border-gray-700">
+					<h3 class="text-2xl font-bold mb-4 text-accent">"But Will AI Work for MY Business?"</h3>
+					<p class="text-lg text-gray-300 max-w-4xl mx-auto">
+						If you answer phones, schedule appointments, send estimates, follow up with customers,
+						or manage any repetitive tasks—then yes, AI will save you hours every week and help you
+						serve customers better. <br/><strong class="text-accent">We guarantee it.</strong>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ROI Section -->
+		<section class="py-20 bg-gray-800">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">The Numbers Don't Lie</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						See what happens when local businesses stop doing everything manually.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+					<div class="text-center bg-gray-900 p-6 rounded-xl">
+						<div
+							class="bg-accent text-black rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+						>
+							60%
+						</div>
+						<h3 class="text-xl font-bold mb-2">Efficiency Increase</h3>
+						<p class="text-gray-300">Average time saved on administrative tasks</p>
+					</div>
+
+					<div class="text-center bg-gray-900 p-6 rounded-xl">
+						<div
+							class="bg-accent text-black rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+						>
+							30%
+						</div>
+						<h3 class="text-xl font-bold mb-2">More Customers</h3>
+						<p class="text-gray-300">Increase in booked appointments with 24/7 availability</p>
+					</div>
+
+					<div class="text-center bg-gray-900 p-6 rounded-xl">
+						<div
+							class="bg-accent text-black rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+						>
+							$5K
+						</div>
+						<h3 class="text-xl font-bold mb-2">Monthly Savings</h3>
+						<p class="text-gray-300">Average cost reduction from automation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section id="contact" class="py-20 bg-accent scroll-mt-20">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+					Ready to Stop Working Nights and Weekends?
+				</h2>
+				<p class="text-xl text-black mb-8 max-w-3xl mx-auto">
+					Get a free AI assessment. We'll show you exactly how AI can automate your biggest
+					time-wasters and help you serve more customers without hiring more staff.
+				</p>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+					<a
+						href="mailto:hello@oncilla.ai"
+						class="bg-black text-white p-6 rounded-xl hover:bg-gray-800 transition-colors"
+					>
+						<div class="text-accent text-2xl mb-2">📧</div>
+						<h3 class="font-bold">Email Us</h3>
+						<p class="text-sm">hello@oncilla.ai</p>
+					</a>
+
+					<a
+						href="tel:+1234567890"
+						class="bg-black text-white p-6 rounded-xl hover:bg-gray-800 transition-colors"
+					>
+						<div class="text-accent text-2xl mb-2">📞</div>
+						<h3 class="font-bold">Call Us</h3>
+						<p class="text-sm">(123) 456-7890</p>
+					</a>
+
+					<a
+						href="#"
+						class="bg-black text-white p-6 rounded-xl hover:bg-gray-800 transition-colors"
+					>
+						<div class="text-accent text-2xl mb-2">📅</div>
+						<h3 class="font-bold">Book Meeting</h3>
+						<p class="text-sm">15-min assessment</p>
+					</a>
+
+					<!-- <div class="bg-black text-white p-6 rounded-xl">
+						<div class="text-accent text-2xl mb-2">💬</div>
+						<h3 class="font-bold">Live Chat</h3>
+						<p class="text-sm">Available 9-5 EST</p>
+					</div> -->
+				</div>
+
+				<div class="bg-black/20 p-8 rounded-xl max-w-2xl mx-auto">
+					<h3 class="text-2xl font-bold text-black mb-4">Get Your Free AI Assessment</h3>
+					<p class="text-black mb-6">
+						Tell us about your business and we'll show you exactly where AI can save you time and
+						money.
+					</p>
+
+					<!-- Success Message (hidden by default) -->
+					<div
+						id="success-message"
+						class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6"
+					>
+						<h4 class="font-bold">Thank you!</h4>
+						<p>We'll email you a detailed AI assessment within 24 hours. Check your inbox!</p>
+					</div>
+
+					<!-- Form -->
+					<form id="assessment-form" class="space-y-4">
+						<div class="grid md:grid-cols-2 gap-4">
+							<input
+								type="text"
+								name="name"
+								placeholder="Your Name"
+								required
+								class="w-full p-3 rounded-lg border border-gray-300 text-black"
+							/>
+							<input
+								type="email"
+								name="email"
+								placeholder="Your Email"
+								required
+								class="w-full p-3 rounded-lg border border-gray-300 text-black"
+							/>
+						</div>
+						<input
+							type="text"
+							name="business"
+							placeholder="Business Name"
+							required
+							class="w-full p-3 rounded-lg border border-gray-300 text-black"
+						/>
+						<textarea
+							name="challenge"
+							placeholder="What's your biggest time-waster? (scheduling, data entry, customer follow-ups, etc.)"
+							rows="3"
+							required
+							class="w-full p-3 rounded-lg border border-gray-300 text-black"
+						></textarea>
+						<button
+							type="submit"
+							id="submit-btn"
+							class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors w-full"
+						>
+							Get My Free AI Assessment 🎯
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials Section -->
+		<!-- <section class="py-20 bg-gray-900">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">What Our Clients Say</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						Real businesses, real results, real people who got their time back.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-600">
+						<div class="flex items-center mb-4">
+							<div
+								class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-black font-bold mr-4"
+							>
+								JM
+							</div>
+							<div>
+								<h4 class="font-bold">Jake Martinez</h4>
+								<p class="text-gray-400 text-sm">Martinez HVAC</p>
+							</div>
+						</div>
+						<p class="text-gray-300 mb-4">
+							"We went from missing 30% of calls to answering everything 24/7. The AI even schedules
+							emergency calls perfectly. Revenue up 40% in 6 months."
+						</p>
+						<div class="text-accent">⭐⭐⭐⭐⭐</div>
+					</div>
+
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-600">
+						<div class="flex items-center mb-4">
+							<div
+								class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-black font-bold mr-4"
+							>
+								SR
+							</div>
+							<div>
+								<h4 class="font-bold">Sarah Rodriguez</h4>
+								<p class="text-gray-400 text-sm">Rodriguez Law Firm</p>
+							</div>
+						</div>
+						<p class="text-gray-300 mb-4">
+							"The AI handles client intake perfectly—better than our old receptionist. We're
+							booking 50% more consultations and I can focus on actual legal work."
+						</p>
+						<div class="text-accent">⭐⭐⭐⭐⭐</div>
+					</div>
+
+					<div class="bg-gray-800 p-8 rounded-xl border border-gray-600">
+						<div class="flex items-center mb-4">
+							<div
+								class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-black font-bold mr-4"
+							>
+								TW
+							</div>
+							<div>
+								<h4 class="font-bold">Tom Wilson</h4>
+								<p class="text-gray-400 text-sm">Wilson Appliance Repair</p>
+							</div>
+						</div>
+						<p class="text-gray-300 mb-4">
+							"I was skeptical about AI, but now I can't imagine working without it. Automatic
+							scheduling, instant quotes, happy customers. Wish I'd done this years ago."
+						</p>
+						<div class="text-accent">⭐⭐⭐⭐⭐</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-gray-800">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">Common Questions</h2>
+					<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+						We get these questions a lot. Here are the straight answers.
+					</p>
+				</div>
+
+				<div class="max-w-4xl mx-auto space-y-6">
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">How much does this cost?</h3>
+						<p class="text-gray-300">
+							Every business is different, so we customize our pricing based on your specific needs and goals. We'll discuss investment options during your free consultation that make sense for your budget and expected ROI (Return of Investment).
+						</p>
+					</div>
+
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">
+							What if my business is too small for AI?
+						</h3>
+						<p class="text-gray-300">
+							Actually, smaller businesses often see the biggest impact! You don't need a huge team
+							or complex systems. We specialize in simple, effective AI that works for businesses
+							with 1-50 employees.
+						</p>
+					</div>
+
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">How quickly will I see results?</h3>
+						<p class="text-gray-300">
+							Most clients start seeing time savings within 2-4 weeks of implementation. Full ROI
+							typically happens within 3-6 months as the AI learns your business and handles more
+							tasks.
+						</p>
+					</div>
+
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">What if I'm not tech-savvy?</h3>
+						<p class="text-gray-300">
+							Perfect! We designed this for business owners, not programmers. The AI runs
+							automatically. You'll get a simple dashboard and we provide full training and support.
+						</p>
+					</div>
+
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">
+							What makes you different from other AI companies?
+						</h3>
+						<p class="text-gray-300">
+							We focus exclusively on practical AI for local businesses. No flashy demos or complex
+							enterprise solutions—just proven AI tools that save you time and make you money.
+						</p>
+					</div>
+
+					<div class="bg-gray-900 p-6 rounded-xl border border-gray-600">
+						<h3 class="text-xl font-bold mb-3 text-accent">Can I start small and expand later?</h3>
+						<p class="text-gray-300">
+							Absolutely! Many clients start with one AI solution (like a knowledge base or simple
+							automation) and add more as they see results. We build everything to grow with your
+							business.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 py-12 border-t border-gray-700">
+			<div class="container mx-auto px-4">
+				<div class="grid md:grid-cols-4 gap-8 mb-8">
+					<div>
+						<div class="flex items-center space-x-2 mb-4">
+							<div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+								<img src="logo.jpg">
+									<circle cx="30" cy="55" r="2" fill="white" />
+									<circle cx="40" cy="58" r="1.5" fill="white" />
+									<circle cx="50" cy="55" r="2" fill="white" />
+									<circle cx="60" cy="58" r="1.5" fill="white" />
+									<circle cx="70" cy="55" r="2" fill="white" />
+									<path d="M75 55 Q85 45 90 40 Q85 35 80 45 Q75 50 75 55" fill="black" />
+								</svg>
+							</div>
+							<span class="text-lg font-bold">ONCILLA AI</span>
+						</div>
+						<p class="text-gray-400">AI solutions that work for local businesses.</p>
+					</div>
+
+					<div>
+						<h4 class="font-bold mb-4">Services</h4>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#" class="hover:text-accent transition-colors">AI Phone Agents</a></li>
+							<li>
+								<a href="#" class="hover:text-accent transition-colors">Business Automation</a>
+							</li>
+							<li><a href="#" class="hover:text-accent transition-colors">Knowledge Base AI</a></li>
+							<li>
+								<a href="#" class="hover:text-accent transition-colors">AI-Powered Websites</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold mb-4">Industries</h4>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#" class="hover:text-accent transition-colors">Home Services</a></li>
+							<li>
+								<a href="#" class="hover:text-accent transition-colors">Professional Services</a>
+							</li>
+							<li><a href="#" class="hover:text-accent transition-colors">Local Businesses</a></li>
+							<li><a href="#" class="hover:text-accent transition-colors">Healthcare</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold mb-4">Contact</h4>
+						<ul class="space-y-2 text-gray-400">
+							<li>hello@oncilla.ai</li>
+							<li>(123) 456-7890</li>
+							<li>Atlanta, GA</li>
+							<li>Free Consultations Available</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+					<p>
+						&copy; 2024 Oncilla AI. All rights reserved. |
+						<a href="#" class="hover:text-accent">Privacy Policy</a> |
+						<a href="#" class="hover:text-accent">Terms of Service</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Smooth Scrolling Script -->
+		<script>
+			// Mobile menu functionality
+			const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuBtn.addEventListener('click', function () {
+				mobileMenu.classList.toggle('hidden');
+			});
+
+			// Close mobile menu when clicking on a link
+			const mobileLinks = mobileMenu.querySelectorAll('a');
+			mobileLinks.forEach((link) => {
+				link.addEventListener('click', function () {
+					mobileMenu.classList.add('hidden');
+				});
+			});
+
+			// Smooth scrolling for all anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start',
+						});
+					}
+				});
+			});
+
+			// Form submission to Google Sheets
+			const assessmentForm = document.getElementById('assessment-form');
+			const submitBtn = document.getElementById('submit-btn');
+			const successMessage = document.getElementById('success-message');
+
+			assessmentForm.addEventListener('submit', async function (e) {
+				e.preventDefault();
+
+				// Change button text to show loading
+				const originalText = submitBtn.innerHTML;
+				submitBtn.innerHTML = 'Sending...';
+				submitBtn.disabled = true;
+
+				// Get form data
+				const formData = new FormData(assessmentForm);
+				const data = {
+					name: formData.get('name'),
+					email: formData.get('email'),
+					business: formData.get('business'),
+					challenge: formData.get('challenge'),
+					timestamp: new Date().toISOString(),
+					source: 'Website Assessment Form',
+				};
+
+				try {
+					// Replace this URL with your Google Apps Script Web App URL
+					const GOOGLE_SCRIPT_URL = "https://script.google.com/home/projects/17PjTPFzZK1IjKYpxLLHfv5JUnuIrY4Q67UObIS0p9ejwozFQ6Oj0Ph5E/edit";
+
+					const response = await fetch(GOOGLE_SCRIPT_URL, {
+						method: 'POST',
+						mode: 'cors',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(data),
+					});
+
+					if (response.ok) {
+						// Show success message
+						assessmentForm.style.display = 'none';
+						successMessage.classList.remove('hidden');
+					} else {
+						throw new Error('Network response was not ok');
+					}
+				} catch (error) {
+					console.error('Error:', error);
+					alert(
+						'Sorry, there was an error submitting your form. Please try emailing us directly at hello@oncilla.ai'
+					);
+
+					// Reset button
+					submitBtn.innerHTML = originalText;
+					submitBtn.disabled = false;
+				}
+			});
+		</script>
+	</body>
 </html>
